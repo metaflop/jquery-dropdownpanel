@@ -54,6 +54,7 @@
               return $(li).find('a').html() == selectedOption.html()
             })).addClass('active');
 
+            // listen for clicks on our custom dropdown
             lis.click(function(e) {
                 e.preventDefault();
 
@@ -76,6 +77,21 @@
 
                 // callback
                 settings.onClicked();
+            });
+
+            // listen for changes on the original select
+            select.change(function(e) {
+                var selectEl = select;
+                var listItems = lis;
+                var displayEl = wrapper;
+
+                var value = $(this).val();
+                var activeLi = $(lis.filter('[id^="' + value + '"]'));
+
+                listItems.removeClass('active');
+                activeLi.addClass('active');
+
+                displayEl.html(activeLi.find('a').text());
             });
 
             select.after(ul);
