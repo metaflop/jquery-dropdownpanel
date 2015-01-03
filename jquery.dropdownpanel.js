@@ -14,15 +14,16 @@
 
 (function ($) {
 
-    var defaults = {
-        panelToggleDuration: 500,
-        panelToggleEasing: 'easeInOutExpo',
-        wrapperCssClass: 'dropdown-value',
-        listCssClass: 'dropdown-list',
-        onClicked: function() {}
-    };
-
     $.fn.dropdownpanel = function(options) {
+
+        var defaults = {
+            panelToggleDuration: 500,
+            panelToggleEasing: 'easeInOutExpo',
+            wrapperCssClass: 'dropdown-value',
+            listCssClass: 'dropdown-list',
+            onClicked: function() {}
+        };
+
         return $.each(this, function(index, select) {
             var select = $(select);
 
