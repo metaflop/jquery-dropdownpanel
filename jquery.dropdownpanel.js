@@ -51,7 +51,7 @@
             var lis = ul.find('li');
             // mark the currently selected option
             $($.grep(lis, function(li) {
-              return $(li).find('a').html() == selectedOption.html()
+              return $(li).find('a').html() == selectedOption.html();
             })).addClass('active');
 
             // listen for clicks on our custom dropdown
