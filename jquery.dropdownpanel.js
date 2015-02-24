@@ -1,5 +1,5 @@
 /*
- * JQuery Dropdown Panel plugin (v 0.1.0)
+ * JQuery Dropdown Panel plugin (v 0.2.0)
  *
  * Replaces an html select element with a
  * simple, animated dropdown.
